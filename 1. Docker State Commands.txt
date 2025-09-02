@@ -1,0 +1,38 @@
+1. Docker State Commands
+
+A. Pull the Ubuntu image tagged as 20.04 from Docker Hub.
+Command: docker pull ubuntu:20.04
+
+B. List all available images.
+Command: docker images
+
+
+C. Pull the Ubuntu image tagged as latest from Docker Hub.
+Command: docker pull ubuntu:latest
+
+D. Remove the Ubuntu image tagged as 20.04.
+Command: docker rmi ubuntu:20.04
+
+E. Run a container named ubuntu-os interactively with detached mode, using the Ubuntu image tagged as latest.
+Command: docker run -itd --name ubuntu-os ubuntu:latest
+
+F. Stop the running container ubuntu-os.
+Command: docker stop ubuntu-os
+
+G. Restart the container ubuntu-os.
+Command: docker restart ubuntu-os
+
+H. List all containers.
+Command: docker ps -a
+
+I. Create a directory within the running container ubuntu-os in detached mode.
+Command: docker exec -d ubuntu-os mkdir /app-folder
+
+J. Check whether the folder is created within the container or not.
+Command: docker exec ubuntu-os ls -l /
+
+K. Stop the container ubuntu-os.
+Command: docker stop ubuntu-os
+
+L. Prune all containers.
+Command: docker container prune

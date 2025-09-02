@@ -1,0 +1,11 @@
+4. Pushing an Image to Docker Hub
+This section outlines the steps required to push your custom-built image to your Docker Hub repository.
+
+A. Tag your Docker image with your Docker Hub username/repository name.
+Command: docker tag my-node-server your-dockerhub-username/my-node-server:1.0
+
+B. Log in to Docker Hub using the docker login command.
+Command: docker login
+
+C. Push the tagged image to Docker Hub using the docker push command.
+Command: docker push your-dockerhub-username/my-node-server:1.0

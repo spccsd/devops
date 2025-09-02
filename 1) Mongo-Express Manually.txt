@@ -1,0 +1,13 @@
+1) Mongo-Express Application (Manual using Docker commands)
+A. Run a container using the Mongo image
+Command: docker network create mongo-express-network
+
+Then, run the MongoDB container.
+
+Command: docker run -d --name mongodb --network mongo-express-network -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo:latest
+
+B. Run a container using the mongo-express image
+
+Command: docker run -d --name mongo-express --network mongo-express-network -p 8081:8081 -e ME_CONFIG_MONGODB_SERVER=mongodb -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password mongo-express:latest
+
+http://localhost:8081 on your host machine.

@@ -1,0 +1,17 @@
+3. Custom Dockerfile for a Node.js HTTP Server
+Here's a step-by-step guide to creating, building, and running a Node.js container.
+
+Step 1: Create the Node.js Server File
+Create a file named server.js with the following content:
+
+Step 2: Create the package.json file
+Create a file named package.json in the same directory.
+
+Step 3: Construct the Dockerfile
+Create a file named Dockerfile (with no file extension) in the same directory.
+
+Step 4: Build the Docker Image
+Command: docker build -t my-node-server .
+
+Step 5: Run the Container
+Command: docker run -p 3000:3000 my-node-server

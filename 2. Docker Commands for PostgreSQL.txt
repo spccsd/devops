@@ -1,0 +1,19 @@
+2. Docker Commands for PostgreSQL
+
+A. Pull the latest version of the PostgreSQL image from Docker Hub.
+Command: docker pull postgres:latest
+
+B. Set up a container named postres-user1 with appropriate environment variables and ensure it's in detached mode.
+Command: docker run -d --name postgres-user1 -e POSTGRES_PASSWORD=mysecretpassword postgres:latest
+
+C. Connect to the PostgreSQL instance within the container postres-user1 using the command psql -U postgres.
+Command: docker exec -it postgres-user1 psql -U postgres
+
+D. Create a new database within the PostgreSQL instance.
+Command: CREATE DATABASE mydatabase; (Note: This is an SQL command, to be run inside the psql terminal.)
+
+E. Stop the container named postres-user1.
+Command: docker stop postgres-user1
+
+F. Delete the container named postres-user1
+Command: docker rm postgres-user1

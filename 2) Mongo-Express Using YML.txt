@@ -1,0 +1,19 @@
+2) Mongo-Express Application (Using docker-compose.yml)
+Docker Compose simplifies the process of managing multi-container applications by allowing you to define all services, networks, and volumes in a single YAML file.
+
+A. Run a container using the Mongo image
+B. Run a container using the mongo-express image
+All the configurations for both containers are defined in a single docker-compose.yml file. Docker Compose automatically creates a default network and connects all services to it, allowing them to communicate using their service names.
+
+create docker-compose.yml
+
+
+How to run it:
+
+Save the content above to a file named docker-compose.yml.
+
+Open a terminal in the same directory as the file.
+
+Run the command: docker-compose up -d
+
+http://localhost:8081.
